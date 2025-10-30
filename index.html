@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Vocabulary Builder</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body class="bg-gray-100 min-h-screen flex flex-col items-center py-10">
+    <h1 class="text-indigo-700 text-4xl font-bold mb-6">WordWise AI</h1>
+
+    <!-- Search Section -->
+    <div class="bg-white shadow-lg rounded-2xl p-6 w-full max-w-md">
+      <label for="wordInput" class="font-semibold block mb-2"
+        >Enter a word:</label
+      >
+      <input
+        type="text"
+        placeholder="e.g.innovation"
+        id="wordInput"
+        class="border border-gray-300 rounded-lg w-full px-3 py-2 mb-4"
+      />
+      <button
+        class="w-full bg-indigo-600 text-white px-3 py-2 rounded-lg hover:bg-indigo-700"
+        id="searchBtn"
+      >
+        Search Meaning
+      </button>
+    </div>
+
+    <!-- Loading -->
+     <div id="loading" class="mt-5 text-gray-700 hidden">
+      Genrating Result...
+    </div>
+
+    <!-- Result Section -->
+    <div
+      class="bg-white shadow-lg rounded-2xl p-6 w-full max-w-md mt-8 hidden"
+      id="resultBox"
+    >
+      <h2
+        class="text-2xl text-indigo-600 font-semibold mb-2"
+        id="wordTitle"
+      ></h2>
+      <p class="text-gray-700 mb-2" id="wordMeaning"></p>
+      <p class="italic text-gray-500" id="wordExample"></p>
+      <p id="wordSynonyms" class="text-gray-700 mb-2"></p>
+      <p id="wordAntonyms" class="text-gray-700 mb-2"></p>
+      <button
+        class="bg-green-500 text-white rounded-lg px-4 py-2 hover:bg-green-600 mt-4"
+        id="saveBtn"
+      >
+        Save Word
+      </button>
+    </div>
+
+    <!-- Quiz Section  -->
+     <div id="quizBox" class="mt-4 bg-gray-50 p-4 rounded-lg w-full max-w-md hidden">
+      <p id="quizQuestion" class="text-gray-700 mb-2 font-semibold">    </p>
+        <input 
+        type="text"
+        id="quizAnswer"
+        placeholder="Enter Your Answer"
+        class="border px-3 py-2 rounded w-full mb-2"
+        >
+        <button id="checkQuiz"
+        class="bg-indigo-500 text-white px-3 py-2 rounded hover:bg-indigo-700 transition">
+      Check Answer
+      </button>
+      <p id="quizResult" class="mt-2 font-semibold"></p>
+     </div>
+
+    <!-- Saved Words Section -->
+    <div
+      class="bg-white shadow-lg rounded-2xl p-6 w-full max-w-md mt-8"
+      id="savedWords"
+    >
+      <h2 class="text-xl text-indigo-600 font-semibold mb-2">My Word Bank</h2>
+      <ul class="list-disc list-inside text-gray-700" id="wordList">
+       
+      </ul>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
